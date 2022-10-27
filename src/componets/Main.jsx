@@ -11,8 +11,8 @@ const Main = () => {
     fetch(url_set)
       .then((res) => res.json())
       .then((data) => {
-       // console.log(data.results);
-       setData(data.results);
+        // console.log(data.results);
+        setData(data.results);
       });
   }, [url_set]);
   return (
@@ -49,15 +49,15 @@ const Main = () => {
         </form>
       </div>
       <div className="container">
-       {
-           (movieData.length==0)?<p className="notfound">Not Found</p>: movieData.map((res,pos)=>{
-             return(
-                <Card info={res} key
-             )
-           })
-       }
+        {movieData.length == 0 ? (
+          <p className="notfound">Not Found</p>
+        ) : (
+          movieData.map((res, pos) => {
+            return <Card info={res} key={pos} />;
+          })
+        )}
       </div>
     </>
-  )
-}
+  );
+};
 export default Main;
