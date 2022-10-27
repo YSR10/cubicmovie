@@ -14,7 +14,7 @@ const Card = (movie) => {
           </div>
           <div className="overview">
             <h1>overview</h1>
-            {movie.info}
+            {movie.info.overview}
           </div>
         </div>
       </div>
