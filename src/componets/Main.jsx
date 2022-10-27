@@ -6,7 +6,6 @@ const Main = () => {
     <>
       <div className="header">
         <nav>
-          <h1 className="logo">CUBIC</h1>
           <ul>
             <li>
               <a href="#">Popular</a>
@@ -37,6 +36,11 @@ const Main = () => {
         </form>
       </div>
       <div className="container">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
         <Card />
       </div>
     </>
