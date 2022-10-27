@@ -9,6 +9,7 @@ let arr = ["Popular", "Theatre", "Kids", "Drama", "Comedie"];
 const Main = () => {
   const [movieData, setData] = useState([]);
   const [url_set, setUrl] = useState(url);
+  const [search, setSearch] = useState();
   useEffect(() => {
     fetch(url_set)
       .then((res) => res.json())
@@ -45,8 +46,20 @@ const Main = () => {
         "/discover/movie?with_genres=35&with_cast=23659&sort_by=revenue.desc" +
         API_key;
     }
+
+    setUrl(url);
   };
 
+  const searchMovie = (evt) => {
+    if (evt.key == "Enter") {
+      url =
+        base_url +
+        "/search/movie?api_key=db95773a7fb212ba790d71f6adac0e7e&query=" +
+        search;
+      setUrl(url);
+      setSearch(" ");
+    }
+  };
   return (
     <>
       <div className="header">
@@ -75,6 +88,11 @@ const Main = () => {
               type="text"
               placeholder="Enter Movie Name"
               className="inputText"
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
+              value={search}
+              onKeyPress={searchMovie}
             ></input>
             <button></button>
           </div>

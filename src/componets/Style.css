@@ -170,3 +170,7 @@ nav ul li a:focus::before {
     margin-right: 100px;
   }
 }
+.notfound {
+  font: 40px;
+  font-weight: bold;
+}
