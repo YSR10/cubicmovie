@@ -68,7 +68,7 @@ const Main = () => {
               return (
                 <li>
                   <a
-                    href="/"
+                    href="#"
                     name={value}
                     onClick={(e) => {
                       getData(e.target.name);
@@ -101,7 +101,7 @@ const Main = () => {
         </form>
       </div>
       <div className="container">
-        {movieData.length === 0 ? (
+        {movieData.length == 0 ? (
           <p className="notfound">Not Found</p>
         ) : (
           movieData.map((res, pos) => {
