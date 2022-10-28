@@ -94,7 +94,10 @@ const Main = () => {
               value={search}
               onKeyPress={searchMovie}
             ></input>
-            <button></button>
+            <button>
+              {" "}
+              <img src="/images/search.svg" alt="" />{" "}
+            </button>
           </div>
         </form>
       </div>
