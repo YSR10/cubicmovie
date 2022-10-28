@@ -1,4 +1,3 @@
-import { getDefaultNormalizer } from "@testing-library/react";
 import react, { useEffect, useState } from "react";
 import Card from "./Card";
 let API_key = "&api_key=db95773a7fb212ba790d71f6adac0e7e";
