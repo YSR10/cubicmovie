@@ -95,7 +95,7 @@ const Main = () => {
             ></input>
             <button>
               {" "}
-              <img src="/images/search.svg" alt="" />{" "}
+              <img src="/images/search.svg" alt="search" />{" "}
             </button>
           </div>
         </form>
