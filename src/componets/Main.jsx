@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import Card from "./Card";
+import Nav from "./Nav";
 let API_key = "&api_key=db95773a7fb212ba790d71f6adac0e7e";
 let base_url = "https://api.themoviedb.org/3";
 let url = base_url + "/discover/movie?sort_by=popularity.desc" + API_key;
 let arr = ["Popular", "Theatre", "Kids", "Drama", "Comedie"];
 
 const Main = () => {
+  //<Routes>
+  <Route path=":nav" element={<Nav />} />;
+  //</Routes>;
+
   const [movieData, setData] = useState([]);
   const [url_set, setUrl] = useState(url);
   const [search, setSearch] = useState();
